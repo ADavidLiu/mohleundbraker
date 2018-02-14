@@ -1,0 +1,10 @@
+.container {
+    @include atExtralarge {
+        width: 1270px;
+    }
+
+    &--small {
+        max-width: 850px;
+        margin: 0 auto;
+    }
+}

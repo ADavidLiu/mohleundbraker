@@ -1,0 +1,32 @@
+.list {
+    &__item {
+        padding-left: 2.5rem;
+        position: relative;
+        @include atSmall {
+            padding-left: 1.875rem;
+        }
+
+        & + & {
+            margin-top: 5px;
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 2px;
+            left: 0;
+            background-image: url("../images/arrow.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            height: 16px;
+            width: 16px;
+            @include atSmall {
+                top: 0;
+            }
+            @include atMedium {
+                top: 2px;
+            }
+        }
+    }
+}

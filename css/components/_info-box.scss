@@ -1,0 +1,64 @@
+.info-box {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    &__icon {
+        font-size: 2.5rem;
+        color: $color-primary;
+        margin-right: 10px;
+        @include atSmall {
+            font-size: 1.875rem;
+        }
+
+        &--small {
+            font-size: 1.4167rem;
+            @include atSmall {
+                font-size: 1.0625rem;
+            }
+        }
+
+        &--white {
+            color: $color-white;
+        }
+    }
+
+    &--center {
+        align-items: center;
+        justify-content: center;
+    }
+
+    &--alt {
+        @include atSmall {
+            text-align: right;
+            justify-content: flex-end;
+        }
+
+        .info-box {
+            &__icon {
+                @include atSmall {
+                    order: 2;
+                    margin-right: 0;
+                    margin-left: 10px;
+                }
+            }
+
+            &__copy {
+                @include atSmall {
+                    order: 1;
+                }
+            }
+        }
+    }
+
+    &--alt-2 {
+        align-items: center;
+        
+        .info-box {
+            &__icon {
+                margin-right: 3.125rem;
+                width: 36px;
+            }
+        }
+    }
+}

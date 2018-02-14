@@ -1,0 +1,126 @@
+.heading-primary {
+    font-size: 4.167rem;
+    color: $color-white;
+    font-family: $font-2;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    transition: all .25s;
+    @include atSmall {
+        font-size: 3.125rem;
+    }
+}
+
+.heading-secondary {
+    color: $color-white;
+    font-size: 3.75rem;
+    font-family: $font-2;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    transition: all .25s;
+    @include atSmall {
+        font-size: 2.8125rem;
+    }
+
+    &--big {
+        font-size: 3.9167rem;
+        @include atSmall {
+            font-size: 2.9375rem;
+        }
+    }
+}
+
+.heading-tertiary {
+    font-size: 3rem;
+    color: $color-white;
+    font-family: $font-2;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+    transition: all .25s;
+    @include atSmall {
+        font-size: 2.25rem;
+    }
+}
+
+.heading-quaternary {
+    font-size: 1.833rem;
+    color: $color-white;
+    font-family: $font-1;
+    font-weight: 900;
+    transition: all .25s;
+    letter-spacing: 0.025em;
+    @include atSmall {
+        font-size: 1.375rem;
+    }
+}
+
+.paragraph {
+    font-size: 1.333rem;
+    font-family: $font-1;
+    font-weight: 400;
+    color: $color-gray;
+    letter-spacing: 0.025em;
+    hyphens: auto;
+    transition: all .25s;
+    @include atSmall {
+        hyphens: manual;
+        font-size: 1rem;
+    }
+
+    &--small {
+        font-size: 1.167rem;
+        @include atSmall {
+            font-size: 0.875rem;
+        }
+    }
+
+    &--small-2 {
+        font-size: 1.25rem;
+        @include atSmall {
+            font-size: 0.9375rem;
+        }
+    }
+
+    &--med {
+        font-size: 1.4167rem;
+        @include atSmall {
+            font-size: 1.0625rem;
+        }
+    }
+
+    &--big {
+        font-size: 1.667rem;
+        @include atSmall {
+            font-size: 1.25rem;
+        }
+    }
+
+    &--big-2 {
+        font-size: 1.833rem;
+        @include atSmall {
+            font-size: 1.375rem;
+        }
+    }
+
+    &--big-3 {
+        font-size: 2.25rem;
+        @include atSmall {
+            font-size: 1.6875rem;
+        }
+    }
+
+    &--big-4 {
+        font-size: 2rem;
+        @include atSmall {
+            font-size: 1.5rem;
+        }
+    }
+
+    &--huge {
+        font-size: 2.5rem;
+        @include atSmall {
+            font-size: 1.875rem;
+        }
+    }
+}

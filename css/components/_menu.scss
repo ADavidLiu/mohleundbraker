@@ -1,0 +1,77 @@
+.menu {
+    @include atSmall {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    &__item {
+        cursor: pointer;
+        position: relative;
+        transition: all .25s;
+        @include atSmall {
+            padding-top: 3.75rem;
+            font-size: 0.75rem;
+        }
+        @include atMedium {
+            font-size: 0.875rem;
+        }
+        @include atLarge {
+            font-size: 0.9375rem;
+        }
+
+        & + & {
+            margin-top: 1rem;
+            @include atSmall {
+                margin-top: 0;
+                margin-left: 0.5rem;
+            }
+            @include atLarge {
+                margin-left: 1rem;
+            }
+            @include atExtralarge {
+                margin-left: 1.5625rem;
+            }
+        }
+
+        &:hover {
+            padding-top: 2rem;
+            @include atSmall {
+                color: $color-primary-alt;
+                padding-top: 3.75rem;
+            }
+
+            &:before {
+                opacity: 1;
+            }
+        }
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30%;
+            height: 6px;
+            background-color: $color-white;
+            transition: all .25s;
+            opacity: 0;
+            @include atSmall {
+                width: 100%;
+                background-color: $color-primary-alt;
+            }
+        }
+
+        &--active {
+            padding-top: 2rem;
+            @include atSmall {
+                padding-top: 3.75rem;
+            }
+
+            &:before {
+                opacity: 1;
+            }
+        }
+    }
+}

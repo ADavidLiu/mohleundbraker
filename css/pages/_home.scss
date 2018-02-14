@@ -1,0 +1,151 @@
+.section-about {
+    &__item {
+        position: relative;
+    }
+
+    &__icon {
+        margin-bottom: 2.5rem;
+        @include atSmall {
+            width: 4rem;
+            margin-bottom: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateX(-100%);
+        }
+        @include atMedium {
+            width: auto;
+        }
+    }
+}
+
+.section-management {
+    background-image: url("../images/bg-management.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.section-schuladmin {
+    background-image: url("../images/bg-schuladmin.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.section-portfolio {
+    background-image: url("../images/bg-portfolio.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-bottom: 15px solid $color-white;
+}
+
+.section-news {
+    &__slide {
+        @include atSmall {
+            display: flex !important;
+            align-items: center;
+            justify-content: space-between;
+        }
+        @include atLarge {
+            align-items: flex-start;
+        }
+
+        &-img {
+            max-width: 100%;
+            @include atSmall {
+                width: 35%;
+            }
+        }
+
+        &-copy {
+            margin-top: 3.333rem;
+            @include atSmall {
+                margin-top: 0;
+                margin-left: 3.75rem;
+                width: 65%;
+            }
+            @include atLarge {
+                padding-top: 1.25rem;
+            }
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__controls {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include atSmall {
+            width: calc(65% - 3.75rem);
+            margin: 0 0 0 auto;
+        }
+    }
+
+    &__dots {
+        .slick-dots {
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            li {
+                height: 2.5rem;
+                width: 2.5rem;
+                border-radius: 50%;
+                border: 2px solid $color-white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                @include atSmall {
+                    height: 1.875rem;
+                    width: 1.875rem;
+                }
+
+                &.slick-active {
+                    border-color: $color-primary;
+
+                    p {
+                        font-weight: 900;
+                    }
+                }
+            }
+        }
+    }
+
+    &__arrows {
+        display: flex;
+        align-items: stretch;
+        justify-content: flex-end;
+    }
+
+    &__arrow {
+        height: 4.6875rem;
+        width: 4.6875rem;
+        background-color: $color-primary;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        transition: all .25s;
+
+        &:hover {
+            background-color: $color-primary-light;
+        }
+
+        & + & {
+            margin-left: 1.333rem;
+            @include atSmall {
+                margin-left: 1rem;
+            }
+        }
+
+        &--prev {
+            transform: scaleX(-1);
+        }
+    }
+}

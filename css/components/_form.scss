@@ -1,0 +1,88 @@
+.form {
+    &__group {
+        @include atSmall {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        & + & {
+            margin-top: 1.333rem;
+            @include atSmall {
+                margin-top: 1rem;
+            }
+        }
+
+        &--message {
+            @include atSmall {
+                align-items: flex-start;
+            }
+        }
+    }
+
+    &__label {
+        font-family: $font-1;
+        color: $color-white;
+        font-size: 1.4167rem;
+        font-weight: 400;
+        line-height: 2rem;
+        margin-bottom: 5px;
+        @include atSmall {
+            font-size: 1.0625rem;
+            line-height: 1.5rem;
+            margin-bottom: 0;
+            margin-right: 1.5625rem;
+            width: 22%;
+        }
+        @include atMedium {
+            width: 17%;
+        }
+    }
+
+    &__input {
+        width: 100%;
+        background-color: $color-gray-darker;
+        height: 2.5rem;
+        border-radius: 1.333rem;
+        font-family: $font-1;
+        color: $color-white;
+        font-size: 1.333rem;
+        padding: 0 1rem;
+        border: 0;
+        @include atSmall {
+            width: 78%;
+            height: 1.875rem;
+            border-radius: 1rem;
+            font-size: 1rem;
+            padding: 0 0.75rem;
+        }
+        @include atMedium {
+            width: 83%;
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        &--textarea {
+            resize: none;
+            height: 6.667rem;
+            padding: 1rem;
+            @include atSmall {
+                padding: 0.75rem;
+                height: 5rem;
+            }
+        }
+    }
+
+    &__btn {
+        margin-top: 2.0833rem;
+        @include atSmall {
+            margin-top: 1.5625rem;
+            margin-left: calc(22% + 1.5625rem);
+        }
+        @include atMedium {
+            margin-left: calc(17% + 1.5625rem);
+        }
+    }
+}

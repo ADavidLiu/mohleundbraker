@@ -1,0 +1,22 @@
+.banner {
+    background-image: url("../images/bg-banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &__content {
+        padding: 20.9375rem 0 5.3125rem 0;
+        @include atSmall {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &-img {
+            margin-bottom: 3.333rem;
+            @include atSmall {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
